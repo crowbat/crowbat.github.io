@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        console.log("hi");
+        $("#home").click(function() {
+            $("#myContent").load("home.html");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $("#about").click(function() {
+            $("#myContent").load("about.html");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $("#contact").click(function() {
+            $("#myContent").load("contact.html");
+        });
+    });
+</script>
+</head>
 <title>crowbat.github.io</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -25,15 +49,14 @@ footer{
 
 <!-- Navbar -->
 <ul class="w3-navbar w3-theme">
-  <li><a href="#" class="w3-theme-l1">Home</a></li>
-  <li><a href="#" class="w3-hover-white">About</a></li>
-  <li><a href="#" class="w3-hover-white">Contact</a></li>
+  <li><a href="#" class="w3-theme-l1" id="home">Home</a></li>
+  <li><a href="#" class="w3-hover-white" id="about">About</a></li>
+  <li><a href="#" class="w3-hover-white" id="contact">Contact</a></li>
 </ul>
-
 <div class="w3-main">
 
   <div class="w3-row">
-    <div class="w3-container">
+    <div class="w3-container" id="myContent">
       <p>Content goes here.</p>
     </div>
   </div>
